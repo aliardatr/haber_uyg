@@ -92,30 +92,31 @@ val LocalHaberSecici = staticCompositionLocalOf<((Haber) -> Unit)?> { null }
 // =====================================================================
 object ReklamKimlikleri {
     // Vitrin (yatay kart) reklam pozisyonları
-    const val VITRIN_2_SIRA  = "ca-app-pub-1338752009803690/5609128516"
-    const val VITRIN_7_SIRA  = "ca-app-pub-3940256099942544/2247696110"
-    const val VITRIN_10_SIRA = "ca-app-pub-3940256099942544/2247696110"
+    const val VITRIN_2_SIRA  = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"
+    const val VITRIN_7_SIRA  = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"
+    const val VITRIN_10_SIRA = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"
     // Haber detayına girerken gösterilen ödüllü geçiş reklamı
-    const val ODULLU_GECIS = "ca-app-pub-1338752009803690/3524606793"
+    const val ODULLU_GECIS = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"
     // 🚀 YENİ: Uygulama Arka Plandan Dönerken Gösterilecek Reklam ID'si
-    const val APP_OPEN_REKLAM = "ca-app-pub-1338752009803690/8254526972"
+    const val APP_OPEN_REKLAM = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"
 
     // Ana akış arası native reklamlar (3, 9, 15, 21... örüntüsünde)
     val AKIS_REKLAM_IDLERI = listOf(
-        "ca-app-pub-1338752009803690/8235291854",
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110"
+        "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+         "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+         "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+         "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+         "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+         "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+         "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+         "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"
+        
     )
     // Makale içindeki *reklam* etiketi için max 3 adet havuz
     val IC_METIN_REKLAM_IDLERI = listOf(
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110",
-        "ca-app-pub-3940256099942544/2247696110"
+        "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+        "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx",
+        "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"
     )
 }
 
