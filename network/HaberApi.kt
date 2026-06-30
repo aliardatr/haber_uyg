@@ -6,9 +6,12 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
-// =====================================================================
+
+
 // 1. SUNUCUDAN GELEN JSON KALIPLARI (Response Data Classes)
-// =====================================================================
+
+
+
 /** /kategoriler endpoint'inden döner */
 data class KategorilerResponse(
     val kategoriler: List<String>
@@ -19,7 +22,9 @@ data class CoverConfig(
 data class TokenRequest(val cihaz_id: String, val fcm_token: String)
 data class IlgiAlanlariRequest(val ilgi_alanlari: List<String>)
 /**
- * /haberler/son-dakika ve /haberler/{kategori} endpoint'lerinden döner.
+
+ * /ha
+ berler/son-dakika ve /haberler/{kategori} endpoint'lerinden döner.
  *
  * vitrin  → O kategorinin günlük en çok okunan max 10 haberi.
  *           SADECE ilk istekte (skip=0) dolu gelir, sonraki sayfalarda boş listedir.
@@ -31,13 +36,17 @@ data class HaberlerResponse(
     val vitrin  : List<Haber>,
     val haberler: List<Haber>
 )
-// =====================================================================
+
+
+
 // 2. FASTAPİ SUNUCU ENDPOINTLERİ
 // =====================================================================
 interface HaberApiService {
 
     @GET("api/cover")
     suspend fun getCoverConfig(): CoverConfig
+
+    
     /** Sistemdeki tüm aktif kategori isimlerini çeker */
     @GET("kategoriler")
     suspend fun getKategoriler(): KategorilerResponse
@@ -104,15 +113,14 @@ interface HaberApiService {
         @retrofit2.http.Body request: IlgiAlanlariRequest
     ): Any
 }
-// =====================================================================
+
+
+
 // 3. RETROFİT MOTORU
 // =====================================================================
 object HaberApi {
-    /**
-     * Render'daki canlı sunucu adresi.
-     * Emülatörde localhost test etmek isterseniz: "http://10.0.2.2:8000/"
-     */
-    private const val BASE_URL = "https://render-api-ft5l.onrender.com/"
+   
+    private const val BASE_URL = "https://sunucu_adresi/"
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
